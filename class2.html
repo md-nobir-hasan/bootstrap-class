@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class 2</title>
+    <link rel="stylesheet" href="bootstrap523.css" />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="accordion" id="parent1">
+        <div class="accordion-item mb-2">
+          <!-- <h2 class="accordion-header">
+            Accordion Item1 -->
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#accodionone"
+              aria-controls="accodionone"
+              aria-expanded="false"
+            >
+              Button One
+            </button>
+          <!-- </h2> -->
+
+          <div
+            id="accodionone"
+            class="accordion-collapse collapse"
+            data-bs-parent="#parent1"
+          >
+            <div class="accordion-body">
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime
+                deleniti quo expedita at exercitationem sequi rerum consequatur
+                quis a fugit.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <!-- <h2 class="accordion-header">
+            Accordion Item2 -->
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#accodion2"
+              aria-controls="accodion2"
+              aria-expanded="true"
+            >
+              Button Two
+            </button>
+          <!-- </h2> -->
+
+          <div
+            id="accodion2"
+            class="accordion-collapse collapse"
+            data-bs-parent="#parent1"
+          >
+            <div class="accordion-body">
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime
+                deleniti quo expedita at exercitationem sequi rerum consequatur
+                quis a fugit.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+<script src="bootstrap.min.js"></script>
+  </body>
+</html>
