@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin Template</title>
-    <link rel="stylesheet" href="bootstrap523.css" />
+    <link rel="stylesheet" href="../bootstrap523.css" />
     <style>
         #sidenav{
             width: 360px;
@@ -55,17 +55,17 @@
         </div>
         <ul class="nav nav-pills flex-column">
             <li class="nav-item">
-                <a href="#" class="nav-link fw-bold fs-5 active">Home</a>
+                <a href="../admin-template.html" class="nav-link fw-bold fs-5 ">Home</a>
             </li>
             <li class="nav-item">
-                <a href="#sn1" data-bs-toggle="collapse" class="nav-link fw-bold fs-5" aria-expanded="false">Components</a>
-                <div class="collapse bg-black" id="sn1">
+                <a href="#sn1" data-bs-toggle="collapse" class="nav-link fw-bold fs-5 active" >Components</a>
+                <div class="collapse show bg-black" id="sn1">
                     <ul class="nav nav-pills flex-column ps-3">
-                        <li class="nav-item">
-                            <a href="components/form.html" class="nav-link fs-5">Form</a>
+                        <li class="nav-item mt-2">
+                            <a href="components/form.html" class="nav-link fs-5 active">Form</a>
                         </li>
                         <li class="nav-item">
-                            <a href="./components/report.html" class="nav-link fs-5">Report</a>
+                            <a href="report.html" class="nav-link fs-5">Report</a>
                         </li>
                         <li class="nav-item">
                             <a href="" class="nav-link fs-5">Secondary menue</a>
@@ -80,6 +80,8 @@
     </div>
 
     <div class="wrapper ps-1 nshow" id="wrapper">
+
+        <!-- top navbar  -->
         <header class="navbar shadow-lg">
             <span class="mobile_hide" id="sidenav_toggler">
                 <svg id="mobile_hide" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
@@ -107,19 +109,72 @@
 
                 <li class="nav-item">
                     <a href="" class="nav-link">
-                        <img src="download.png" alt="User Image" height="60px">
+                        <img src="../download.png" alt="User Image" height="60px">
                     </a>
                 </li>
             </ul>
         </header>
-        <div class="main-section pt-5">
-            <!-- <button class="btn btn-primary  position-relative py-2 pe-4"> Notifications
-                <span class="badge bg-danger rounded-pill position-absolute top-0 end-0">12</span>
-            </button> -->
+
+        <!-- Form  -->
+        <div class="mt-2 p-4">
+             <form action="">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="float-start">Share You Story</h4>
+                        <button class="btn btn-info float-end">Back</button>
+                    </div>
+                
+                    <div class="card-body">
+                    <div class="row gap-2">
+                        <div class="col-12 col-lg-3">
+                            <div class="text-center">
+                                <label for="img_file">
+                                    <img src="../images/img-upload.png" width="150px" alt="" class="img"> 
+                                    <span class="btn btn-primary d-block mt-1">Upload Image</span>
+                                </label>
+                                <input type="file" id="img_file" hidden>
+
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-8">
+                            <div class="row">
+                                <di class="col">
+                                    <label for="title" class="form-label fs-5 fw-medium">Title:</label><span class="text-danger fs-4 fw-bold">*</span>
+                                    <input type="text" id="title" class="form-control" placeholder="Write a title here">
+                                    <span class="text-danger">This field is required</span>
+                                </di>
+                            </div>
+                            <div class="row mt-3">
+                                <di class="col">
+                                    <label for="profession" class="form-label fs-5 fw-medium">Profession:</label>
+                                    <select name="profession" id="profession" class="form-select">
+                                        <option value="">Teacher</option>
+                                        <option value="">Student</option>
+                                        <option value="">Web developer</option>
+                                    </select>
+                                </di>
+                            </div>
+
+                            <div class="row mt-3">
+                                <di class="col">
+                                    <label for="story" class="form-label fs-5 fw-medium">Story:</label>
+                                    <textarea name="story" id="story" cols="30" rows="10" class="form-control" placeholder="Write your story here"></textarea>
+                                </di>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-primary w-100">Post</button>
+                    </div>
+                </div>
+            </form>
         </div>
+
     </div>
 
-    <script src="bootstrap.min.js"></script>
+    <script src="../bootstrap.min.js"></script>
 
     <script>
         const sidenav = document.getElementById('sidenav');
